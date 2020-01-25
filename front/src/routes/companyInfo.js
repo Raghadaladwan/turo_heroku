@@ -7,7 +7,7 @@ class CompanyInfo extends Component {
   componentDidMount = () => {
     axios
       .post(
-        `http://localhost:9000/getCompanyInfo/${this.props.location.state._id}`
+        `https://heroku-raghad.herokuapp.com/getCompanyInfo/${this.props.location.state._id}`
       )
       .then(response =>
         this.setState({

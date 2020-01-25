@@ -141,7 +141,7 @@ class registerPage extends Component {
       newUser.gender !== ""
     ) {
       await axios
-        .post("http://localhost:9000/traineeregister", { newUser })
+        .post("https://heroku-raghad.herokuapp.com/traineeregister", { newUser })
 
         .then(response => {
           console.log("Registered");
@@ -211,7 +211,7 @@ class registerPage extends Component {
       newCompany.comp_description !== ""
     ) {
       await axios
-        .post("http://localhost:9000/companyregister", { newCompany })
+        .post("https://heroku-raghad.herokuapp.com/companyregister", { newCompany })
         .then(response => {
           this.props.history.push("/loginpage");
         })

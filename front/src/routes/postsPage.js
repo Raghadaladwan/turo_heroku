@@ -15,7 +15,7 @@ class postsPage extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:9000/getUser/${cookie.load("isLoggedIn")._id}`)
+      .get(`https://heroku-raghad.herokuapp.com/getUser/${cookie.load("isLoggedIn")._id}`)
 
       .then(response => {
         if (response.data.role === "company") {
@@ -40,7 +40,7 @@ class postsPage extends Component {
     const field = this.state.Trainee_Info.field;
 
     axios
-      .put(`http://localhost:9000/all_posts/${cookie.load("isLoggedIn")._id}`, {
+      .put(`https://heroku-raghad.herokuapp.com/all_posts/${cookie.load("isLoggedIn")._id}`, {
         field
       })
       .then(response => {
@@ -51,7 +51,7 @@ class postsPage extends Component {
   getPost = () => {
     axios
       .get(
-        `http://localhost:9000/copmany_posts/${cookie.load("isLoggedIn")._id}`
+        `https://heroku-raghad.herokuapp.com/copmany_posts/${cookie.load("isLoggedIn")._id}`
       )
       .then(response => {
         this.setState({ post: response.data });
@@ -75,7 +75,7 @@ class postsPage extends Component {
     } else {
       axios
         .put(
-          `http://localhost:9000/add_post/${cookie.load("isLoggedIn")._id}`,
+          `https://heroku-raghad.herokuapp.com/add_post/${cookie.load("isLoggedIn")._id}`,
           newPost
         )
         .then(({ data }) => {

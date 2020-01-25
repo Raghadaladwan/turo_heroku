@@ -9,7 +9,7 @@ class requestsComponent extends Component {
 
   rejectOrAccepted = state => {
     axios.post(
-      `http://localhost:9000/rejectOrAccept/${cookie.load("isLoggedIn")._id}/${
+      `https://heroku-raghad.herokuapp.com/rejectOrAccept/${cookie.load("isLoggedIn")._id}/${
         this.props.companyRequests.postID
       }`,
       { state }

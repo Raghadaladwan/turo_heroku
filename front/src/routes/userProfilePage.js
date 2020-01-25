@@ -13,7 +13,7 @@ class userProfilePage extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:9000/profile/${this.state.userid._id}`)
+      .get(`https://heroku-raghad.herokuapp.com/profile/${this.state.userid._id}`)
       .then(response => {
         if (response.data.role === "trainee") {
           this.setState({ traineeInfo: response.data });
@@ -49,7 +49,7 @@ class userProfilePage extends Component {
     });
     await axios
       .put(
-        `http://localhost:9000/EditTraineeProfile/${this.state.userid._id}`,
+        `https://heroku-raghad.herokuapp.com/EditTraineeProfile/${this.state.userid._id}`,
         newTraineeInfo
       )
 
@@ -79,7 +79,7 @@ class userProfilePage extends Component {
 
     await axios
       .put(
-        `http://localhost:9000/EditCompanyProfile/${this.state.userid._id}`,
+        `https://heroku-raghad.herokuapp.com/EditCompanyProfile/${this.state.userid._id}`,
         newCompanyInfo
       )
 

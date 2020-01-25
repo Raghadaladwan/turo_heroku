@@ -14,7 +14,7 @@ class postComponent extends Component {
   deletePost = id_post => {
     axios
       .delete(
-        `http://localhost:9000/delete_Post/${this.props.userid._id}/${this.props.post._id}`
+        `https://heroku-raghad.herokuapp.com/delete_Post/${this.props.userid._id}/${this.props.post._id}`
       )
       .then(response => {
         this.props.getPost();
@@ -27,7 +27,7 @@ class postComponent extends Component {
   getRequest = () => {
     axios
       .post(
-        `http://localhost:9000/checkTraineeRequest/${
+        `https://heroku-raghad.herokuapp.com/checkTraineeRequest/${
           cookie.load("isLoggedIn")._id
         }/${this.props.post._id}/${this.props.companyPost}`
       )
@@ -60,7 +60,7 @@ class postComponent extends Component {
     };
     axios
       .post(
-        `http://localhost:9000/traineeRequest/${this.props.companyPost}`,
+        `https://heroku-raghad.herokuapp.com/traineeRequest/${this.props.companyPost}`,
         newRequest
       )
       .then(res => {

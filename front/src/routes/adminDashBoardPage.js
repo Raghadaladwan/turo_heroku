@@ -13,7 +13,7 @@ class adminDashBoardPage extends Component {
 
   componentDidMount = () => {
     axios
-      .get(`http://localhost:9000/getUser/${cookie.load("isLoggedIn")._id}`)
+      .get(`https://heroku-raghad.herokuapp.com/getUser/${cookie.load("isLoggedIn")._id}`)
 
       .then(response => {
         if (response.data.role === "company") {
@@ -30,7 +30,7 @@ class adminDashBoardPage extends Component {
   getAllTraineeRequests = () => {
     axios
       .get(
-        `http://localhost:9000/getAllTraineeRequests/${
+        `https://heroku-raghad.herokuapp.com/getAllTraineeRequests/${
           cookie.load("isLoggedIn")._id
         }`
       )
@@ -59,7 +59,7 @@ class adminDashBoardPage extends Component {
   getAccebtedOrRejected = () => {
     axios
       .get(
-        `http://localhost:9000/getAccebtedOrRejected/${
+        `https://heroku-raghad.herokuapp.com/getAccebtedOrRejected/${
           cookie.load("isLoggedIn")._id
         }`
       )

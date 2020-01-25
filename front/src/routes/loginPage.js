@@ -22,7 +22,7 @@ export default class loginPage extends Component {
   checkUserinfo = async event => {
     event.preventDefault();
     await axios
-      .post("http://localhost:9000/loginUser", {
+      .post("https://heroku-raghad.herokuapp.com/loginUser", {
         email: this.state.email,
         password: this.state.password
       })

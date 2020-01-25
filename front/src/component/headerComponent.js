@@ -19,7 +19,7 @@ class headerComponent extends Component {
       return false;
     } else if (cookie.load("isLoggedIn" != null)) {
       axios
-        .get(`http://localhost:9000/loginUser/${cookie.load("isLoggedIn")}`)
+        .get(`https://heroku-raghad.herokuapp.com/loginUser/${cookie.load("isLoggedIn")}`)
         .then(response => {
           this.setState({ userInfo: response.data }, () => {});
         });
