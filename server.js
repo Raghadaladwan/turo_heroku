@@ -17,9 +17,9 @@ app.use(cors());
 //   next();
 // });
 
-// app.get("/", (req, res) => {
-//   res.json(`SERVER WORKING`);
-// });
+app.get("/", (req, res) => {
+  res.json(`SERVER WORKING`);
+});
 
 // ____________________________________________Login User
 
@@ -176,7 +176,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server listening to ${PORT}`));
 
 // __________________________________________________________________________
