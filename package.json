@@ -1,7 +1,7 @@
 {
   "name": "back-end",
   "version": "1.0.0",
-  "description": "",// heeeeee y3ne raghad tktobo 
+  "description": "",
   "main": "server.js",
   "scripts": {
     "front-install": "npm install --prefix front",
