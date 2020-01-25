@@ -17,9 +17,9 @@ app.use(cors());
 //   next();
 // });
 
-app.get("/", (req, res) => {
-  res.json(`SERVER WORKING`);
-});
+// app.get("/", (req, res) => {
+//   res.json(`SERVER WORKING`);
+// });
 
 // ____________________________________________Login User
 
