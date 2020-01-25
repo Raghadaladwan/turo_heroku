@@ -1,0 +1,27 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",// heeeeee y3ne raghad tktobo 
+  "main": "server.js",
+  "scripts": {
+    "Front-End-install": "npm install --prefix Front-End",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "Front-End": "npm start ==refix Front-End",
+    "dev": "concurrently \"npm run server\" \"npm run Front-End\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Front-End && npm run build --prefix Front-End"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.14"
+  },
+  "devDependencies": {
+    "node": "^12.12.0",
+    "nodemon": "^2.0.2"
+  }
+}
